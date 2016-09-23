@@ -139,6 +139,7 @@ stringMLST.py --buildDB -c databases/Neisseria_spp/config.txt -k 35 -P NM
 
 ### Predict:
 
+<<<<<<< HEAD
 #### Single sample :
 ```
 stringMLST.py --predict -1 tests/fastqs/ERR026529_1.fastq -2 tests/fastqs/ERR026529_2.fastq -k 35 -P NM   
@@ -146,13 +147,39 @@ stringMLST.py --predict -1 tests/fastqs/ERR026529_1.fastq -2 tests/fastqs/ERR026
 #### Batch mode (all the samples together):
 ```
 stringMLST.py --predict -d ./tests/fastqs/ -k 35 -P NM  
+=======
+* Download example read datasets with bash script download_example_reads.sh . After download is complete, tests/fastqs folder will contain the following files:
+```
+tests/fastqs/ERR026529_1.fastq
+tests/fastqs/ERR026529_2.fastq
+tests/fastqs/ERR027250_1.fastq
+tests/fastqs/ERR027250_2.fastq
+tests/fastqs/ERR036104_1.fastq
+tests/fastqs/ERR036104_2.fastq
+```
+* Predict:
+
+#### Single sample :
+```
+./stringMLST.py --predict -1 tests/fastqs/ERR026529_1.fastq -2 tests/fastqs/ERR026529_2.fastq -k 35 -P NM 	
+```
+#### Batch mode (all the samples together):
+```
+./stringMLST.py --predict -d ./tests/fastqs/ -k 35 -P NM	
+>>>>>>> Deleted fastq files in 'example read files' folder. Replace them by adding a simple script that download them directly from EBI into a new folder test/fastqs . Changed the README.md to reflect these changes.
 ```
 #### List mode:
 Create a list file (list_paired.txt) as :
 ```
+<<<<<<< HEAD
 tests/fastqs/ERR026529_1.fastq  tests/fastqs/ERR026529_2.fastq
 tests/fastqs/ERR027250_1.fastq  tests/fastqs/ERR027250_2.fastq
 tests/fastqs/ERR036104_1.fastq  tests/fastqs/ERR036104_2.fastq
+=======
+tests/fastqs/ERR026529_1.fastq	tests/fastqs/ERR026529_2.fastq
+tests/fastqs/ERR027250_1.fastq	tests/fastqs/ERR027250_2.fastq
+tests/fastqs/ERR036104_1.fastq	tests/fastqs/ERR036104_2.fastq
+>>>>>>> Deleted fastq files in 'example read files' folder. Replace them by adding a simple script that download them directly from EBI into a new folder test/fastqs . Changed the README.md to reflect these changes.
 ```
 Run the tool as:
 ```
@@ -160,7 +187,11 @@ stringMLST.py --predict -l list_paired.txt -k 35 -P NM
 ```
 #### Working with gziped files
 ```
+<<<<<<< HEAD
 stringMLST.py --predict -1 tests/fastqs/ERR026529_1.fq.gz -2 tests/fastqs/ERR026529_2.fq.gz -p -P NM -k 35 -o ST_NM.txt
+=======
+stringMLST.py --predict -1 tests/fastqs/ERR026529_1.fq.gz -2 tests/fastqs/ERR026529_2.fq.gz -p --prefix <prefix for the database> -k <k-mer size> -o <output file name>
+>>>>>>> Deleted fastq files in 'example read files' folder. Replace them by adding a simple script that download them directly from EBI into a new folder test/fastqs . Changed the README.md to reflect these changes.
 ```
 ## Usage Documentation
 
