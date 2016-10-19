@@ -15,6 +15,7 @@ Thumbs.db
 
 # Compiled C++ files
 *.out
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -48,3 +49,5 @@ wheels/
 *.manifest
 *.spec
 
+=======
+>>>>>>> Change paths in example config files to work OOB from main folder
